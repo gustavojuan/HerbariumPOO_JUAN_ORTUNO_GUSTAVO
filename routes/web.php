@@ -38,9 +38,11 @@ Route::get('/test', function () {
     //Arboreal
     $arboreal = new \App\Models\Arboreal('Pino',1956);
     echo $arboreal->getName();
+    echo $arboreal->climb();
 
     $arboreal = new Aquatic('Anubias',1956);
     echo $arboreal->getName();
+
 
     echo '<hr>';
 

@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class Aquatic extends Plant
+use App\Interfaces\Herbivore;
+
+class Aquatic extends Plant implements Herbivore
 {
 
     public function __construct($name, $discovery_date)
@@ -26,4 +28,13 @@ class Aquatic extends Plant
     }
 
 
+    public function searchVegetables()
+    {
+        // TODO: Implement searchVegetables() method.
+    }
+
+    public function feedPlants()
+    {
+        // TODO: Implement feedPlants() method.
+    }
 }

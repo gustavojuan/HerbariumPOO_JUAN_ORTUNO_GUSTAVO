@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class Bird extends Animal
+use App\Interfaces\Canivarora;
+
+class Bird extends Animal implements Canivarora
 {
     public function __construct($name, $discovery_date)
     {
@@ -20,4 +22,13 @@ class Bird extends Animal
         $this->$attribute  = $value;
     }
 
+    public function huntPrey()
+    {
+        // TODO: Implement huntPrey() method.
+    }
+
+    public function feedMeat()
+    {
+        // TODO: Implement feedMeat() method.
+    }
 }

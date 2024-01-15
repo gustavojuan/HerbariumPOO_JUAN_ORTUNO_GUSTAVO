@@ -53,6 +53,8 @@ Route::get('/test', function () {
     echo  $mammal->name;
     echo  $mammal->discovery_date;
 
+    echo $mammal->huntPrey();
+
 
 
 

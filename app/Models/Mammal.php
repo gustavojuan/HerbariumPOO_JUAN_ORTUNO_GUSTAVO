@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class Mammal extends Animal
+use App\Interfaces\Canivarora;
+
+class Mammal extends Animal implements Canivarora
 {
     public function __construct($name, $discovery_date)
     {
@@ -20,4 +22,13 @@ class Mammal extends Animal
         $this->$attribute  = $value;
     }
 
+    public function huntPrey()
+    {
+        return  "huntPrey from ".get_class($this);
+    }
+
+    public function feedMeat()
+    {
+        return  "feedMeat from ".get_class($this);
+    }
 }

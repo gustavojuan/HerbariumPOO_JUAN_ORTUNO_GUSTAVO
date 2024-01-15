@@ -5,7 +5,6 @@ abstract class Organism
 {
     protected $name;
     protected $discovery_date;
-
     protected static $population;
 
     /**

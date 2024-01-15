@@ -11,4 +11,16 @@ class Plant extends Organism
     {
         return 'soy Planta';
     }
+
+    /**
+     * @return mixed
+     */
+    public static function getNumPlants()
+    {
+        return self::$num_plants;
+    }
+
+
+
+
 }

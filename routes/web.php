@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Plant;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/test', function () {
+
+
+    $data = [
+        'plants'=> [
+            'Arboreal',
+            'Aquatic'
+        ],
+        'fungus'=>[
+            'Edibles',
+            'Hallucinogens'
+        ],
+        'animal'=> [
+            'Mammal',
+            'Bird'
+        ]
+    ];
+
+    //Plants
+
+
+
+
+    dd($plant::getNumPlants());
 });

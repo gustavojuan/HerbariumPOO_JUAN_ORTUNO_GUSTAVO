@@ -20,6 +20,10 @@ abstract class Organism
 
     abstract protected function getCategory();
 
+    public function modifyValue($value_name, $amount){
+        static::${$value_name} += $amount;
+    }
+
 
 }
 

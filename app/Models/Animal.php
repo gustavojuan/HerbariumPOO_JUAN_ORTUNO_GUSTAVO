@@ -9,6 +9,18 @@ class Animal extends Organism
 
     protected function getCategory()
     {
-        return 'soy Animal';
+        return 'Animal';
+    }
+
+
+    public function __get(string $attribute)
+    {
+        return $this->$attribute;
+    }
+
+
+    public function __set(string $attribute, $value)
+    {
+        $this->$attribute  = $value;
     }
 }

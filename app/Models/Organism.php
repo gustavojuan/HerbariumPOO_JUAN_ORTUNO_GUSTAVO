@@ -3,8 +3,8 @@
 
 abstract class Organism
 {
-    protected $name;
-    protected $discovery_date;
+    public $name;
+    public $discovery_date;
     protected static $population;
 
     /**

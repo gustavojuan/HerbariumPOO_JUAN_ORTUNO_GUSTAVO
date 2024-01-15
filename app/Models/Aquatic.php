@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Arboreal extends Plant
+class Aquatic extends Plant
 {
 
     public function __construct($name, $discovery_date)
@@ -19,7 +19,6 @@ class Arboreal extends Plant
     {
         $this->name = $name;
     }
-
 
     public function getCategory()
     {

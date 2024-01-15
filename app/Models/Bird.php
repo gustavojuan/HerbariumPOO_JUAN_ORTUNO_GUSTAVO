@@ -2,16 +2,12 @@
 
 namespace App\Models;
 
-class Fungus extends Organism
+class Bird extends Animal
 {
-
-    protected static $num_fungus;
-
-    protected function getCategory()
+    public function __construct($name, $discovery_date)
     {
-        return 'soy Fungus';
+        parent::__construct($name, $discovery_date);
     }
-
 
     public function __get(string $attribute)
     {
@@ -21,9 +17,7 @@ class Fungus extends Organism
 
     public function __set(string $attribute, $value)
     {
-         $this->$attribute  = $value;
+        $this->$attribute  = $value;
     }
-
-
 
 }

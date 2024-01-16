@@ -15,14 +15,17 @@ abstract class Organism
     {
         $this->name = $name;
         $this->discovery_date = $discovery_date;
+        self::$population++;
+
+
     }
 
 
     abstract protected function getCategory();
 
-    public function modifyValue($value_name, $amount){
-        static::${$value_name} += $amount;
-    }
+    /*Como tenemos que tener un método en todas las hija lo forzamos hacienodlo abstratct*/
+    /*Entendemos que este metodo es para multiplicar el numero de organismos*/
+    abstract public function updatePopulation(int $amount);
 
 
 }

@@ -23,4 +23,10 @@ class Animal extends Organism
     {
         $this->$attribute  = $value;
     }
+
+    public function updatePopulation(int $amount)
+    {
+        self::$num_animal+=$amount;
+        parent::$population+=$amount;
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Aquatic;
+use App\Models\Arboreal;
 use App\Models\Edibles;
 use App\Models\Mammal;
 use App\Models\Plant;
@@ -36,28 +37,11 @@ Route::get('/test', function () {
     ];
 
     //Arboreal
-    $arboreal = new \App\Models\Arboreal('Pino',1956);
-    echo $arboreal->getName();
-    echo $arboreal->climb();
+    $arboreal = new Arboreal('Pino',1956);
+    echo $arboreal::getNumPlants();
 
-    $arboreal = new Aquatic('Anubias',1956);
-    echo $arboreal->getName();
-
-
-    echo '<hr>';
-
-    $edible= new Edibles('Rovelló',1200);
-    echo  $edible->name;
-    echo  $edible->discovery_date;
-
-
-    $mammal= new Mammal('Homo Sapiens',1890);
-    echo  $mammal->name;
-    echo  $mammal->discovery_date;
-
-    echo $mammal->huntPrey();
-
-
+    $arboreal->updatePopulation(127);
+    echo $arboreal::getNumPlants();
 
 
 

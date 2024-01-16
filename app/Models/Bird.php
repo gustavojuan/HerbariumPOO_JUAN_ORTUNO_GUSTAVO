@@ -14,17 +14,6 @@ class Bird extends Animal implements Canivarora
         parent::__construct($name, $discovery_date);
     }
 
-    public function __get(string $attribute)
-    {
-        return $this->$attribute;
-    }
-
-
-    public function __set(string $attribute, $value)
-    {
-        $this->$attribute  = $value;
-    }
-
     public function huntPrey()
     {
         // TODO: Implement huntPrey() method.

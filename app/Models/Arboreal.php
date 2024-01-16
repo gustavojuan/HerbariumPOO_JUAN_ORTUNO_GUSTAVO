@@ -16,22 +16,6 @@ class Arboreal extends Plant implements Herbivore
         parent::__construct($name, $discovery_date);
     }
 
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-
-    public function getCategory()
-    {
-        return parent::getCategory();
-    }
-
 
     public function searchVegetables()
     {

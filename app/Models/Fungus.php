@@ -9,7 +9,7 @@ class Fungus extends Organism
 
     protected function getCategory()
     {
-        return 'soy Fungus';
+        return 'Fungus';
     }
 
 
@@ -21,9 +21,14 @@ class Fungus extends Organism
 
     public function __set(string $attribute, $value)
     {
-         $this->$attribute  = $value;
+        $this->$attribute = $value;
     }
 
 
-
+    public function updatePopulation(int $amount)
+    {
+        self::$num_fungus += $amount;
+        /* Siempre que se acutalice podemos aumentar la poblacion de organismos aunque no se indica*/
+        parent::$population += $amount;
+    }
 }

@@ -14,7 +14,7 @@ class Plant extends Organism
     }
 
 
-    protected function getCategory()
+    public function getCategory()
     {
         return get_class($this);
     }

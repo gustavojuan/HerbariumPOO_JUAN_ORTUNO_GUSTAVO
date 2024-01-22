@@ -18,32 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () {
-
-
-    $data = [
-        'plants'=> [
-            'Arboreal',
-            'Aquatic'
-        ],
-        'fungus'=>[
-            'Edibles',
-            'Hallucinogens'
-        ],
-        'animal'=> [
-            'Mammal',
-            'Bird'
-        ]
-    ];
-
-    //Arboreal
-    $arboreal = new Arboreal('Pino',1956);
-    echo $arboreal::getNumPlants();
-
-    $arboreal->updatePopulation(127);
-    echo $arboreal::getNumPlants();
+Route::delete('/plants/{id}', ['App\Http\Controllers\PlantController','delete'])->name('plants.delete');
+Route::put('/plants/{id}', ['App\Http\Controllers\PlantController','update'])->name('plants.update');
+Route::get('/plants/{id}/edit', ['App\Http\Controllers\PlantController','edit'])->name('plants.edit');
+Route::post('/plants', ['App\Http\Controllers\PlantController','store'])->name('plants.store');
+Route::get('/plants/create', ['App\Http\Controllers\PlantController','create']);
+Route::get('/plants', ['App\Http\Controllers\PlantController','index'])->name('plants.index');;
+Route::get('/plants/{name}', ['App\Http\Controllers\PlantController','show']);
 
 
 
 
-});
+
